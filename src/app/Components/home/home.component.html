@@ -1,0 +1,51 @@
+<section class="jumbotron text-center">
+  <div class="container mb-n2">
+    <h1 class="jumbotron-heading">Find &amp; track the best <span class="ftg-blue">free-to-play</span> games!</h1>
+    <p class="lead text-muted">Track what you've played and search for what to play next! Plus get free premium loot!
+    </p>
+    <p>
+      <!-- <a class="btn btn-ftg-blue m-2 p-2 px-3 mx-2"><strong>GET STARTED </strong> <span class="small">It's
+          free</span></a> -->
+      <a class="btn btn-outline-secondary btn-md ml-0" [routerLink]="['/games','all']" role="button">Browse Games</a>
+    </p>
+  </div>
+
+</section>
+
+<section>
+  <div class="container my-5">
+    <h3> <i class="fas fa-robot mr-2 "></i>Personalized Recommendations</h3>
+    <div class="row mt-3 g-3">
+      <div *ngIf="popularityGames.length == 0" class="row mt-5">
+        <div *ngFor="let i of x" class="col-md-4">
+          <div class="game card mb-4 grow shadow is-loading">
+            <div class="game-img">
+              <div class="image">
+                <img src="https://www.freetogame.com/g/345/thumbnail.jpg" alt="">
+              </div>
+            </div>
+            <div class="game-body content  p-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title text-truncate w-100"><span>G</span></h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 g-3">
+      <div *ngFor="let game of popularityGames" class="col-md-4">
+        <div class="game card mb-4 grow shadow" [routerLink]="['/gameDetails', game['id']]">
+          <div class="game-img">
+            <img class="w-100" src="{{game['thumbnail']}}" alt="">
+          </div>
+          <div class="game-body d-flex justify-content-between align-items-center p-3">
+            <h4 class="card-title text-truncate">{{game['title']}}</h4>
+            <span class="badge badge-ftg py-2 px-2 float-right">FREE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

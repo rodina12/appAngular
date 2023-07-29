@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap');
+
+.navbar{
+    background-color: #272B30 !important;
+    border-bottom: 1px solid rgba(28,28,28,.6);
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
+}
+
+a{
+    cursor: pointer;
+}
+.navbar-brand{
+    font-family: 'Xanh Mono', monospace;
+
+}
+
+.navbar-brand img{
+    width: 70px;
+    filter: drop-shadow(1px 1px 3px #1983e6ce);
+}
+.btn-outline-ftg {
+    color: #4799eb;
+    border-color: #4799eb;
+    height: fit-content;
+}

@@ -1,0 +1,68 @@
+<section>
+
+  <div class="container my-5">
+
+    <div *ngIf="showedGames.length == 0" class="row mt-5">
+      <div *ngFor="let i of x" class="col-md-3">
+        <div class="game card mb-4 grow shadow is-loading">
+          <div class="game-img">
+            <div class="image">
+              <img src="https://www.freetogame.com/g/345/thumbnail.jpg" alt="">
+            </div>
+          </div>
+          <div class="game-body content  p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h4 class="card-title text-truncate w-100"><span>G</span></h4>
+              <!-- <span class="badge badge-ftg py-2 px-2 float-right">FREE</span> -->
+            </div>
+            <p class="text-muted  w-100 mb-2"><span>s</span></p>
+            <!-- <div class="d-flex justify-content-between"> -->
+            <p class="text-muted  w-100 mb-0"><span>s</span></p>
+            <!-- </div> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row mt-5">
+      <div *ngFor="let game of showedGames" class="col-md-3">
+        <div class="game card mb-4 grow shadow" [routerLink]="['/gameDetails', game['id']]">
+          <div class="game-img">
+            <img loading="lazy" class="w-100" data-src="{{game['thumbnail']}}" alt="">
+          </div>
+          <div class="game-body  p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h4 class="card-title text-truncate">{{game['title']}}</h4>
+              <span class="badge badge-ftg py-2 px-2 float-right">FREE</span>
+            </div>
+            <p class="text-muted">{{(game['short_description']+"").slice(0,25)+"..."}}</p>
+            <div class="d-flex justify-content-between">
+              <i class="fas fa-plus-square"></i>
+              <div class="d-flex mb-n2 justify-content-between align-items-center">
+                <span class="badge badge-secondary text-dark badge-genre me-2">{{game['genre']}}</span>
+                <i *ngIf="game['platform'] != 'Web Browser'" class="fab fa-windows text-muted stretched-link"
+                  title="Available on Windows"></i>
+                <i *ngIf="game['platform'] == 'Web Browser'" class="fas fa-window-maximize text-muted stretched-link"
+                  title="Available on Browser"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button *ngIf="showedGames.length != 0 && gamesArray.length > showedGames.length" (click)="seeMore()"
+        class="btn btn-outline-secondary py-2 pt-1 more-btn">More Games
+        <i class="fas fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- <div *ngIf="loading" class="loader__wrap" role="alertdialog" aria-busy="true" aria-live="polite" aria-label="Loading…">
+  <div class="loader" aria-hidden="true">
+    <div class="loader__sq"></div>
+    <div class="loader__sq"></div>
+  </div>
+</div> -->

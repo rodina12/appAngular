@@ -1,0 +1,56 @@
+.main-cont {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    // padding-bottom: 60px;
+}
+
+.bg-register-image {
+    background: url(../../../assets/images/gaming.jpg);
+    background-position: cover;
+    background-size: 100% 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    text-shadow: -1px -1px 0 rgb(0 0 0 / 30%);
+}
+
+.deep-dark {
+    border: 0 solid rgba(0,0,0,.6);
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+// .submitButton {
+//     background-image: linear-gradient(#484e55,#3a3f44 60%,#313539);
+// }
+
+.btn-primary {
+    color: #fff;
+    background-color: #3a3f44;
+    border-color: #22241d;
+    
+}
+
+.graay{
+    background-color: #32383E;
+}
+
+.a2 {
+    color: #4799eb;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.login{
+    background-color: #32383E;
+}

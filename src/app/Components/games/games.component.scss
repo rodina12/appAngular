@@ -1,0 +1,156 @@
+.jumbotron {
+    background: url(../../../assets/images/paladins.png);
+    background-repeat: no-repeat;
+    background-color: #1c1e22;
+    background-position: top;
+    background-size: contain;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0,0,0,.6);
+    padding: 4rem 2rem;
+}
+
+.btn-ftg-blue {
+    background-image: linear-gradient(#4799eb,#4799eb 60%,#49acff);
+    background-repeat: no-repeat;
+    filter: none;
+    color: #fff;
+}
+
+.ftg-blue {
+    color: #49acff!important;
+}
+
+.card-body {
+    padding-bottom: 12px;
+}
+
+.badge-ftg {
+    color: #fff;
+    background-color: #4799eb;
+}
+
+a.stretched-link.no-underline {
+    color: #aaa;
+}
+
+.no-underline {
+    text-decoration: none!important;
+}
+
+a {
+    cursor: pointer;
+    outline: 0!important;
+
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.grow:hover{
+    transform: scale(1.03);
+}
+
+.card {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #32383e;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.6);
+    border-radius: 0.25rem;
+}
+
+.text-muted, .text-secondary {
+    color: #7a8288!important;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.badge-genre {
+    padding-top: 1px;
+    padding-bottom: 2px;
+    transform: translateY(-12%);
+}
+
+.text-dark {
+    color: #272b30!important;
+}
+
+.badge-secondary {
+    background-color: #7a8288;
+}
+
+.more-btn{
+    width: fit-content;
+    margin: auto;
+}
+
+img{
+    min-height: 100px;
+}
+
+.image {
+    img {
+      max-width: 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  .content {
+    padding: 20px 30px;
+  }
+
+
+
+//   loading 
+
+.card.is-loading {
+    .image,
+    h4,
+    p {
+      background: #eee;
+    //   margin: 5px;
+      background: linear-gradient(110deg, #32383E 8%, #485058 18%, #32383E 33%);
+      border-radius: 5px;
+      background-size: 200% 100%;
+      animation: 1.5s shine linear infinite;
+    }
+  
+    .image {
+    //   height: 200px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      img{
+        visibility: hidden;
+      }
+    }
+  
+    h4 {
+      span{
+        visibility: hidden;
+      }
+    }
+  
+    p {
+        span{
+            visibility: hidden;
+          }
+    }
+  }
+  
+  @keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
